@@ -15,14 +15,30 @@ from model_cyclegan import CycleGAN
 from model_nst import StyleTransfer
 
 warnings.filterwarnings("ignore")
+##############################
+from flask import Flask, request
+import git
 
-from flask import Flask
 app = Flask(__name__)
+
 @app.route('/')
 def hello_world():
     return 'Hello from Telegramm bot!'
 
 
+@app.route('/update_server', methods=['POST'])
+    def webhook():
+        if request.method == 'POST':
+            repo = git.Repo('Telegram-bot')
+            origin = repo.remotes.origin
+
+            origin.pull()
+
+            return 'Updated PythonAnywhere successfully', 200
+        else:
+            return 'Wrong event type', 400
+
+##################################
 
 logging.basicConfig(level=logging.INFO)
 # logging.basicConfig(level=logging.INFO, filename="OLD/py_log.log", filemode="w",
