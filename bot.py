@@ -16,6 +16,14 @@ from model_nst import StyleTransfer
 
 warnings.filterwarnings("ignore")
 
+from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def hello_world():
+    return 'Hello from Telegramm bot!'
+
+
+
 logging.basicConfig(level=logging.INFO)
 # logging.basicConfig(level=logging.INFO, filename="OLD/py_log.log", filemode="w",
 #                     format="%(asctime)s %(levelname)s %(message)s")  # логирование
