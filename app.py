@@ -19,14 +19,11 @@ from model_nst import StyleTransfer
 from src.config import load_config
 from src.handlers.start import start_router
 from src.middlewares.config import ConfigMiddleware
-
 import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--url", type=str, default='', help="url")
 args, unknown = parser.parse_known_args()
-print(args)
-
 url = args.url
 
 warnings.filterwarnings("ignore")
@@ -125,7 +122,7 @@ async def send_style(message: types.Message) -> None:
     await message.answer(
         f"{hide_link('https://raw.githubusercontent.com/Andreev-A/Telegram-bot/master/Images/Styles/style.png')}"
         "<b>Посмотри на примеры ниже и выбери нужный стиль или пришли фото с твоим стилем</b> \U0001F447\n\n"
-        f"<b>У меня есть такие картины:</b>\n{styles_text}\n",
+        f"<b>У меня есть такие картины:</b>\n{styles_text[:-24]}\n",
         reply_markup=select_style())
 
 
