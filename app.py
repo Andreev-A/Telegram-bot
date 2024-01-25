@@ -89,7 +89,7 @@ def repeat_transform() -> types.InlineKeyboardMarkup:
     return keyboard
 
 
-menu = (f"{hide_link('https://raw.githubusercontent.com/Andreev-A/Telegram-bot/main/Images/Styles/main_image.png')}"
+menu = (f"{hide_link('https://raw.githubusercontent.com/Andreev-A/Telegram-bot/master/Images/Styles/main_image.png')}"
         "<b>Что я могу сделать:</b>\n"
         "\U00002705 Выбери мою или отправь мне свою\n"
         "         фотографию, с неё я заберу стиль\n"
@@ -123,7 +123,7 @@ async def send_menu(message: types.Message) -> None:
 @dp.message(F.text, Command('transfer_style'))
 async def send_style(message: types.Message) -> None:
     await message.answer(
-        f"{hide_link('https://raw.githubusercontent.com/Andreev-A/Telegram-bot/main/Images/Styles/style.png')}"
+        f"{hide_link('https://raw.githubusercontent.com/Andreev-A/Telegram-bot/master/Images/Styles/style.png')}"
         "<b>Посмотри на примеры ниже и выбери нужный стиль или пришли фото с твоим стилем</b> \U0001F447\n\n"
         f"<b>У меня есть такие картины:</b>\n{styles_text}\n",
         reply_markup=select_style())
