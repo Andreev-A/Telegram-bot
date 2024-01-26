@@ -21,11 +21,11 @@
 <img src='Images/Examples/Screen_4.png' align="center" vspace="5" hspace="5" width=150>
 
 2. Использовать CycleGAN
-   * Превратить лошадь в зебру
-   * Превратить зебру в лошадь
-   * 
-<img src='Images/Examples/Screen_6.png' align="left" vspace="5" hspace="5" width=150>
-<img src='Images/Examples/Screen_7.png' align="left" vspace="5" hspace="5" width=150>
+   Превратить лошадь в зебру
+   Превратить зебру в лошадь
+    
+<img src='Images/Examples/Screen_6.png' align="center" vspace="5" hspace="5" width=250>
+<img src='Images/Examples/Screen_7.png' align="center" vspace="5" hspace="5" width=250>
 
 3. Бот может отправить примеры, получаемые в результате работы 3 вышеназванных алгоритмов
 
@@ -62,6 +62,7 @@ __Особенности работы__:
 
 ## Deployment
 Первоначально бот был задеплоен на pythonanywhere.com. Но бесплатное развертывание гарантирует 100 с работы с максимальным использование процессора в сутки. Что в моем случае хватило на обработку одной картинки - далее уходит порядка 20-40 минут на одну обработку (по мере свободности ресурсов сервера).
+
 <img src='Images/Examples/Screen_8.png' align="center" vspace="5" hspace="5" width=800>
 <img src='Images/Examples/Screen_9.png' align="center" vspace="5" hspace="5" width=800>
 
