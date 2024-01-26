@@ -1,5 +1,5 @@
-## <p align="center">Телеграм бот</p>
-### <p align="center">Aiogram StyleTransfer CycleGAN Webhook</p>
+## <p> align="center">Телеграм бот</p>
+### <p> align="center">Aiogram StyleTransfer CycleGAN Webhook</p>
 
 <img src='Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=360>
 
@@ -13,7 +13,7 @@
 <br><br><br><br><br>
 Функционал бота:
 
-1. Перенос стиля
+<p1>. Перенос стиля</p>
    * Для начала необходимо отправить боту фотографию стиля, а затем фотографию, на которую необходимо перенести стиль.
    * Есть возможность выбрать картинку стиля у бота. Предлагается на выбор 6 разных картин художников.  
 <img src='Images/Examples/Screen_3.png' align="left" vspace="5" hspace="5" width=240>
