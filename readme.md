@@ -9,7 +9,7 @@
 Для написания бота использовалась библиотека aiogram 3 для построения асинхронной архитектуры.
 Весь код в файле _app.py_.
 
-<img src='Images/Examples/Screen_2.png' align="leftt" vspace="5" hspace="5" width=150>
+<img src='Images/Examples/Screen_2.png' align="left" vspace="5" hspace="5" width=150>
 <br><br><br><br><br>
 Функционал бота:
 
@@ -21,13 +21,13 @@
 <img src='Images/Examples/Screen_4.png' align="center" vspace="5" hspace="5" width=150>
 
 2. Использовать CycleGAN
-   Превратить лошадь в зебру
-   Превратить зебру в лошадь
+    * Превратить лошадь в зебру
+    * Превратить зебру в лошадь
     
-<img src='Images/Examples/Screen_6.png' align="center" vspace="5" hspace="5" width=250>
-<img src='Images/Examples/Screen_7.png' align="center" vspace="5" hspace="5" width=250>
+<img src='Images/Examples/Screen_6.png' align="left" vspace="5" hspace="5" width=250>
+<img src='Images/Examples/Screen_7.png' align="right" vspace="5" hspace="5" width=250>
 
-3. Бот может отправить примеры, получаемые в результате работы 3 вышеназванных алгоритмов
+3. Бот может отправить примеры, получаемые в результате работы трёх вышеназванных алгоритмов
 
 __Особенности работы__:
 1. Запоминание пользователей и отправляемых ими фотографий стиля реализовано через словарь. В нём хранится id пользователя, название выбранного алгоритма и в случае использования style transfer сохраняется фотография стиля. Фотография, на которую переносится стиль, передаётся сразу в пайплайн выбранного алгоритма.
