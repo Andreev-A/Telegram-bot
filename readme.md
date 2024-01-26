@@ -1,7 +1,7 @@
 ## <p align="center">Телеграм бот</p>
 ### <p align="center">Aiogram StyleTransfer CycleGAN Webhook</p>
 
-<img src='Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=200>
+<img src='Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=300>
 
 ## Telegram Bot
 Это - Neural style transfer бот. Он умеет создавать новые фотографии с помощью нейронных сетей,
@@ -16,9 +16,9 @@
 1. Перенос стиля
    * Для начала необходимо отправить боту фотографию стиля, а затем фотографию, на которую необходимо перенести стиль.
    * Есть возможность выбрать картинку стиля у бота. Предлагается на выбор 6 разных картин художников.  
-<img src='Images/Examples/Screen_3.png' align="left" vspace="5" hspace="5" width=250>
-<img src='Images/Examples/Screen_4.png' align="center" vspace="5" hspace="5" width=250>
-<img src='Images/Examples/Screen_5.png' align="right" vspace="5" hspace="5" width=250>
+<img src='Images/Examples/Screen_3.png' align="left" vspace="5" hspace="5" width=240>
+<img src='Images/Examples/Screen_4.png' align="center" vspace="5" hspace="5" width=240>
+<img src='Images/Examples/Screen_5.png' align="right" vspace="5" hspace="5" width=240>
 
 
 2. Использовать CycleGAN
@@ -26,7 +26,7 @@
     * Превратить зебру в лошадь  
     
 <img src='Images/Examples/Screen_6.png' align="left" vspace="5" hspace="5" width=350>
-<img src='Images/Examples/Screen_7.png' align="right" vspace="5" hspace="5" width=350>
+<img src='Images/Examples/Screen_7.png' align="right" vspace="5" hspace="5" width=350>  
 
 3. Бот может отправить примеры, получаемые в результате работы трёх вышеназванных алгоритмов  
 
