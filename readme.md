@@ -2,7 +2,7 @@
 ### <p align="center">Aiogram StyleTransfer CycleGAN Webhook</p>
 
 <img src='Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=360>  
-<br><br>
+
 ## Telegram Bot
 Это - Neural style transfer бот. Он умеет создавать новые фотографии с помощью нейронных сетей,
 используя классический алгоритм Гатиса на базе предобученной VGG19 или используя CycleGAN.
@@ -16,7 +16,7 @@
    * Есть возможность выбрать картинку стиля у бота. Предлагается на выбор 6 разных картин художников.  
 <img src='Images/Examples/Screen_3.png' align="left" vspace="2" hspace="2" width=250>
 <img src='Images/Examples/Screen_4.png' align="right" vspace="2" hspace="2" width=250>
-<img src='Images/Examples/Screen_5.png' align="center" vspace="2" hspace="2" width=280>
+<img src='Images/Examples/Screen_5.png' align="center" vspace="2" hspace="2" width=278>
 
 2. Использовать CycleGAN
     * Превратить лошадь в зебру
