@@ -1,7 +1,7 @@
 ## <p align="center">Телеграм бот</p>
 ### <p align="center">Aiogram StyleTransfer CycleGAN Webhook</p>
 
-<img src='Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=400>
+<img src='Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=360>
 
 ## Telegram Bot
 Это - Neural style transfer бот. Он умеет создавать новые фотографии с помощью нейронных сетей,
@@ -9,7 +9,7 @@
 Для написания бота использовалась библиотека aiogram 3 для построения асинхронной архитектуры.
 Весь код в файле _app.py_.
 
-<img src='Images/Examples/Screen_2.png' align="left" vspace="5" hspace="5" width=350>
+* <img src='Images/Examples/Screen_2.png' align="left" vspace="5" hspace="5" width=350>
 <br><br><br><br><br>
 Функционал бота:
 
@@ -25,8 +25,7 @@
     * Превратить лошадь в зебру
     * Превратить зебру в лошадь  
     
-<img src='Images/Examples/Screen_6.png' align="cente" vspace="5" hspace="5" width=350>
-<img src='Images/Examples/Screen_7.png' align="cente" vspace="5" hspace="5" width=350>  
+<img src='Images/Examples/Screen_6.png' align="center" vspace="5" hspace="5" width=350> <img src='Images/Examples/Screen_7.png' align="center" vspace="5" hspace="5" width=350>  
 
 3. Бот может отправить примеры, получаемые в результате работы трёх вышеназванных алгоритмов  
 
