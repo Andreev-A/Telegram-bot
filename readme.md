@@ -14,18 +14,19 @@
 Функционал бота:
 
 1. Перенос стиля
-<img src='Images/Examples/Screen_3.png' align="center" vspace="5" hspace="5" width=150>
    * Для начала необходимо отправить боту фотографию стиля, а затем фотографию, на которую необходимо перенести стиль.
-<img src='Images/Examples/Screen_5.png' align="center" vspace="5" hspace="5" width=150>
    * Есть возможность выбрать картинку стиля у бота. Предлагается на выбор 6 разных картин художников.
-<img src='Images/Examples/Screen_4.png' align="center" vspace="5" hspace="5" width=150>
+<img src='Images/Examples/Screen_3.png' align="left" vspace="5" hspace="5" width=250>
+<img src='Images/Examples/Screen_4.png' align="center" vspace="5" hspace="5" width=250>
+<img src='Images/Examples/Screen_5.png' align="right" vspace="5" hspace="5" width=250>
+
 
 2. Использовать CycleGAN
     * Превратить лошадь в зебру
     * Превратить зебру в лошадь
     
-<img src='Images/Examples/Screen_6.png' align="left" vspace="5" hspace="5" width=250>
-<img src='Images/Examples/Screen_7.png' align="right" vspace="5" hspace="5" width=250>
+<img src='Images/Examples/Screen_6.png' align="left" vspace="5" hspace="5" width=350>
+<img src='Images/Examples/Screen_7.png' align="right" vspace="5" hspace="5" width=350>
 
 3. Бот может отправить примеры, получаемые в результате работы трёх вышеназванных алгоритмов
 
