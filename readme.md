@@ -25,6 +25,7 @@
    * Превратить зебру в лошадь
 <img src='Images/Examples/Screen_6.png' align="center" vspace="5" hspace="5" width=150>
 <img src='Images/Examples/Screen_7.png' align="center" vspace="5" hspace="5" width=150>
+
 3. Бот может отправить примеры, получаемые в результате работы 3 вышеназванных алгоритмов
 
 __Особенности работы__:
@@ -60,8 +61,8 @@ __Особенности работы__:
 
 ## Deployment
 Первоначально бот был задеплоен на pythonanywhere.com. Но бесплатное развертывание гарантирует 100 с работы с максимальным использование процессора в сутки. Что в моем случае хватило на обработку одной картинки - далее уходит порядка 20-40 минут на одну обработку (по мере свободности ресурсов сервера).
-<img src='Images/Examples/Screen_8.png' align="center" vspace="5" hspace="5" width=250>
-<img src='Images/Examples/Screen_9.png' align="center" vspace="5" hspace="5" width=250>
+<img src='Images/Examples/Screen_8.png' align="center" vspace="5" hspace="5" width=400>
+<img src='Images/Examples/Screen_9.png' align="center" vspace="5" hspace="5" width=400>
 
 По этой причине на данный момент времени бот развернут на компьютере [Nvidia Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) под управлением Ubuntu 20.3, который позволяет создавать автономные аппаратные системы, работающие на моделях глубокого обучения с GPU-ускорением.
 
