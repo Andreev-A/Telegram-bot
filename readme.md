@@ -1,5 +1,4 @@
 #### <p align="center">Aiogram StyleTransfer CycleGAN Webhook</p>
-## <p align="center">Телеграм бот</p>
 
 <img src='Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=360>  
 
