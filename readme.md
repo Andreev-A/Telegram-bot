@@ -59,8 +59,8 @@ __Особенности работы__:
 ## Deployment
 Первоначально бот был развёрнут на pythonanywhere.com. Но бесплатное развертывание гарантирует 100 с работы с максимальным использование процессора в сутки. Что в моем случае хватило на обработку одной картинки - далее уходит порядка 20-40 минут на одну обработку (по мере свободности ресурсов сервера).
 
-<img src='Images/Examples/Screen_8.png' align="center" vspace="5" hspace="5" width=800>
-<img src='Images/Examples/Screen_9.png' align="center" vspace="5" hspace="5" width=800>
+<img src='Images/Examples/Screen_8.png' align="center" vspace="5" hspace="5" width=850>
+<img src='Images/Examples/Screen_9.png' align="center" vspace="5" hspace="5" width=850>
 
 По этой причине на данный момент времени бот развернут на компьютере [Nvidia Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) под управлением Ubuntu 20.3, который позволяет создавать автономные аппаратные системы, работающие на моделях глубокого обучения с GPU-ускорением.
 
