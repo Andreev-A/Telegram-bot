@@ -14,10 +14,9 @@
 1. Перенос стиля
    * Для начала необходимо отправить боту фотографию стиля, а затем фотографию, на которую необходимо перенести стиль.
    * Есть возможность выбрать картинку стиля у бота. Предлагается на выбор 6 разных картин художников.  
-<img src='Images/Examples/Screen_3.png' align="left" vspace="5" hspace="5" width=250>
-<img src='Images/Examples/Screen_4.png' align="right" vspace="5" hspace="5" width=250>
-<img src='Images/Examples/Screen_5.png' align="center" vspace="5" hspace="5" width=270>
-<br><br><br><br><br><br><br>
+<img src='Images/Examples/Screen_3.png' align="left" vspace="2" hspace="2" width=250>
+<img src='Images/Examples/Screen_4.png' align="right" vspace="2" hspace="2" width=250>
+<img src='Images/Examples/Screen_5.png' align="center" vspace="2" hspace="2" width=270>
 
 2. Использовать CycleGAN
     * Превратить лошадь в зебру
