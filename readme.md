@@ -1,7 +1,7 @@
-## <p align="center">Телеграм бот</p>
+### <p align="center">Телеграм бот</p>
 ### <p align="center">Aiogram StyleTransfer CycleGAN Webhook</p>
 
-<img src='Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=360>
+<img src='Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=360>  
 
 ## Telegram Bot
 Это - Neural style transfer бот. Он умеет создавать новые фотографии с помощью нейронных сетей,
