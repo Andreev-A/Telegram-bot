@@ -8,14 +8,14 @@
 используя классический алгоритм Гатиса на базе предобученной VGG19 или используя CycleGAN.
 Для написания бота использовалась библиотека aiogram 3 для построения асинхронной архитектуры.
 Весь код в файле _app.py_.
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 Функционал бота:  
 1. Перенос стиля
    * Для начала необходимо отправить боту фотографию стиля, а затем фотографию, на которую необходимо перенести стиль.
    * Есть возможность выбрать картинку стиля у бота. Предлагается на выбор 6 разных картин художников.  
 <img src='Images/Examples/Screen_3.png' align="left" vspace="5" hspace="5" width=240>
-<img src='Images/Examples/Screen_4.png' align="center" vspace="5" hspace="5" width=240>
+<img src='Images/Examples/Screen_4.png' align="right" vspace="5" hspace="5" width=240>
 <img src='Images/Examples/Screen_5.png' align="center" vspace="5" hspace="5" width=240>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
