@@ -25,7 +25,7 @@
 
 2. Использовать CycleGAN
     * Превратить лошадь в зебру
-    * Превратить зебру в лошадь  
+    * Превратить зебру в лошадь
 <img src='Images/Examples/Screen_6.png' align="center" vspace="5" hspace="5" width=350>
 <img src='Images/Examples/Screen_7.png' align="center" vspace="5" hspace="5" width=350>  
 
