@@ -11,7 +11,7 @@
 
 Весь код в файле [_app.py_](https://github.com/Andreev-A/Telegram-bot/blob/master/app.py)
 
-Код обучения модели в файле [_train_vgg19.ipynb_](https://github.com/Andreev-A/Telegram-bot/blob/master/model_nst/train_vgg19.ipynb)
+ [_train_vgg19.ipynb_](https://github.com/Andreev-A/Telegram-bot/blob/master/model_nst/train_vgg19.ipynb)
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 Функционал бота:  
@@ -25,8 +25,8 @@
 2. Использовать CycleGAN
     * Превратить лошадь в зебру
     * Превратить зебру в лошадь  
-<img src='Images/Examples/Screen_6.png' align="center" vspace="5" hspace="5" width=350>
-<img src='Images/Examples/Screen_7.png' align="center" vspace="5" hspace="5" width=350>  
+<img src='Images/Examples/Screen_6.png' align="left" vspace="5" hspace="5" width=350>
+<img src='Images/Examples/Screen_7.png' align="right" vspace="5" hspace="5" width=350>  
 
 3. Бот может отправить примеры, полученные в результате работы трёх вышеназванных алгоритмов  
 
