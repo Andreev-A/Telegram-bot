@@ -7,17 +7,18 @@
 используя классический алгоритм Гатиса на базе предобученной VGG19 или используя CycleGAN.
 Для написания бота использовалась библиотека aiogram 3 для построения асинхронной архитектуры.
 
-[Открыть __Neural style transfer бот__](https://t.me/apower_bot)
+Открыть [__Neural style transfer бот__](https://t.me/apower_bot)
 
 Весь код в файле [_app.py_](https://github.com/Andreev-A/Telegram-bot/blob/master/app.py)
 
 Код обучения модели в файле [_train_vgg19.ipynb_](https://github.com/Andreev-A/Telegram-bot/blob/master/model_nst/train_vgg19.ipynb)
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 Функционал бота:  
 1. Перенести стиль
    * Для начала необходимо отправить боту фотографию стиля, а затем фотографию, на которую необходимо перенести стиль.
-   * Есть возможность выбрать картинку стиля у бота. Предлагается на выбор 6 разных картин художников.  
+   * Есть возможность выбрать картинку стиля у бота. Предлагается на выбор 6 разных картин художников.
+<br> 
 <img src='Images/Examples/Screen_3.png' align="left" vspace="2" hspace="2" width=250>
 <img src='Images/Examples/Screen_4.png' align="right" vspace="2" hspace="2" width=250>
 <img src='Images/Examples/Screen_5.png' align="center" vspace="2" hspace="2" width=278>
@@ -74,7 +75,7 @@ __Особенности работы__:
 #!/bin/bash
 
 res=$(curl --location --request GET 'https://api.ngrok.com/tunnels' \
---header 'Authorization: Bearer здесь свой ключ API' \
+--header 'Authorization: Bearer здесь ключ API' \
 --header 'Ngrok-Version: 2' | awk 'BEGIN { FS="\""; RS="," }; { if ($2 == "public_url") {print $4}}')
 
 if [ -z "$res" ]
