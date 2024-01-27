@@ -7,7 +7,7 @@
 используя классический алгоритм Гатиса на базе предобученной VGG19 или используя CycleGAN.
 Для написания бота использовалась библиотека aiogram 3 для построения асинхронной архитектуры.
 
-Весь код в файле _app.py_.
+Весь код в файле [_app.py_](https://github.com/Andreev-A/Telegram-bot/blob/master/app.py).
 
 Код обучения модели в файле _train_vgg19.ipynb_
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
