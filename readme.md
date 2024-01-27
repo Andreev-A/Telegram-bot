@@ -88,9 +88,9 @@ cd /home/alexandr/Bot
 python3 -i app.py --url="$res"
 ```
 Настройки телеграм бота, в том числе, его токен и параметры для __webhook__ хранятся в файле .env  
-(нет в репозитарии)
+(нет в репозитарии).
 
-Все вычисления производятся на GPU
+Все вычисления производятся на GPU.
 
 ## requirements.txt
 [Перечень основных пакетов и их версии:](https://github.com/Andreev-A/Telegram-bot/blob/master/requirements.txt)  
