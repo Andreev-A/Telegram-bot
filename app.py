@@ -38,6 +38,7 @@ config = load_config(".env")
 
 WEBHOOK_PATH: str = f"/bot/{config.tg.token}"
 WEBHOOK_URL: str = url + WEBHOOK_PATH  # config.tg.webhook_url
+IMAGE_PATH = 'https://raw.githubusercontent.com/Andreev-A/Telegram-bot/master/Images/'
 
 app = FastAPI()
 bot = Bot(token=config.tg.token, parse_mode="HTML")
@@ -52,7 +53,8 @@ styles_images = sorted([file for file in glob.glob('Images/Styles/*.jpg')])
 
 def select_transform() -> types.InlineKeyboardMarkup:
     buttons = [
-        [types.InlineKeyboardButton(text="Перенести стиль", callback_data="button_transfer_style")],
+        [types.InlineKeyboardButton(text="Перенести стиль",
+                                    callback_data="button_transfer_style")],
         [types.InlineKeyboardButton(text="\U0001F40E Превратить лошадь в зебру \U0001F993",
                                     callback_data="button_into_zebra")],
         [types.InlineKeyboardButton(text="\U0001F993 Превратить зебру в лошадь \U0001F40E",
@@ -70,7 +72,8 @@ def select_style() -> types.InlineKeyboardMarkup:
          types.InlineKeyboardButton(text="4️⃣", callback_data="button_style_4")],
         [types.InlineKeyboardButton(text="5️⃣", callback_data="button_style_5"),
          types.InlineKeyboardButton(text="6️⃣", callback_data="button_style_6")],
-        [types.InlineKeyboardButton(text="Отправить фотографию для стиля", callback_data="button_style_photo")],
+        [types.InlineKeyboardButton(text="Отправить фотографию для стиля",
+                                    callback_data="button_style_photo")],
         [types.InlineKeyboardButton(text="Возврат в меню", callback_data="button_menu")]
     ]
     keyboard = types.InlineKeyboardMarkup(inline_keyboard=buttons)
@@ -79,14 +82,15 @@ def select_style() -> types.InlineKeyboardMarkup:
 
 def repeat_transform() -> types.InlineKeyboardMarkup:
     buttons = [
-        [types.InlineKeyboardButton(text="Повторить с выбранным стилем", callback_data="button_style_repeat")],
+        [types.InlineKeyboardButton(text="Повторить с выбранным стилем",
+                                    callback_data="button_style_repeat")],
         [types.InlineKeyboardButton(text="Возврат в меню", callback_data="button_menu")]
     ]
     keyboard = types.InlineKeyboardMarkup(inline_keyboard=buttons)
     return keyboard
 
 
-menu = (f"{hide_link('https://raw.githubusercontent.com/Andreev-A/Telegram-bot/master/Images/Styles/main_image.png')}"
+menu = (f"{hide_link(IMAGE_PATH + 'main_image.png')}"
         "<b>Что я могу сделать:</b>\n"
         "\U00002705 Выбери мою или отправь мне свою\n"
         "         фотографию, с неё я заберу стиль\n"
@@ -105,7 +109,8 @@ async def send_start(message: types.Message) -> None:
     logging.info(f"New User! Current number of users in dict: {len(db_users)}")
     await message.answer(
         f"Привет, <b>{message.from_user.first_name}</b>!  \U0001F44B\n\n"
-        "Я - <b>Neural style transfer</b> бот и я создаю новые фотографии с помощью нейронных сетей.\n\n"
+        "Я - <b>Neural style transfer</b> бот и я создаю новые фотографии "
+        "с помощью нейронных сетей.\n\n"
         f"{menu}",
         reply_markup=select_transform())
 
@@ -120,8 +125,9 @@ async def send_menu(message: types.Message) -> None:
 @dp.message(F.text, Command('transfer_style'))
 async def send_style(message: types.Message) -> None:
     await message.answer(
-        f"{hide_link('https://raw.githubusercontent.com/Andreev-A/Telegram-bot/master/Images/Styles/style.png')}"
-        "<b>Посмотри на примеры ниже и выбери нужный стиль или пришли фото с твоим стилем</b> \U0001F447\n\n"
+        f"{hide_link(IMAGE_PATH + 'style.png')}"
+        "<b>Посмотри на примеры ниже и выбери нужный стиль или пришли фото с твоим стилем</b> "
+        "\U0001F447\n\n"
         f"<b>У меня есть такие картины:</b>\n{styles_text[:-24]}\n",
         reply_markup=select_style())
 
@@ -153,13 +159,16 @@ async def callbacks_button(callback: types.CallbackQuery) -> None:
     await callback.answer()
 
 
-async def cycle_gan(message: types.Message, image: t.Optional[t.BinaryIO], type_algorithm: str) -> None:
-    wts_path = 'models_wts/horse2zebra.pth' if type_algorithm == 'horse_into_zebra' else 'models_wts/zebra2horse.pth'
+async def cycle_gan(message: types.Message, image: t.Optional[t.BinaryIO],
+                    type_algorithm: str) -> None:
+    wts_path = 'models_wts/horse2zebra.pth' if type_algorithm == 'horse_into_zebra' \
+        else 'models_wts/zebra2horse.pth'
     new_image = CycleGAN.run_gan(wts_path, image)
     logging.info("Finished CycleGAN")
     bot = Bot(token=config.tg.token, parse_mode="HTML")
     await bot.send_photo(message.chat.id, photo=BufferedInputFile(new_image.read(), filename=""))
-    await bot.send_message(message.chat.id, "Надеюсь, тебе понравилось.\n Хочешь попробовать еще раз?",
+    await bot.send_message(message.chat.id, "Надеюсь, тебе понравилось.\n "
+                                            "Хочешь попробовать еще раз?",
                            reply_markup=select_transform())
     # await bot.close()
 
@@ -170,7 +179,8 @@ async def style_transfer(message: types.Message, image_style: t.Optional[t.Union
     logging.info("Finished Style Transfer")
     bot = Bot(token=config.tg.token, parse_mode="HTML")
     await bot.send_photo(message.chat.id, photo=BufferedInputFile(new_image.read(), filename=""))
-    await bot.send_message(message.chat.id, "Надеюсь, тебе понравилось.\n Хочешь попробовать еще раз?",
+    await bot.send_message(message.chat.id, "Надеюсь, тебе понравилось.\n "
+                                            "Хочешь попробовать еще раз?",
                            reply_markup=repeat_transform())
     # await bot.close()
 
@@ -199,17 +209,20 @@ async def download_photo(message: types.Message) -> None:
                                  parse_mode=ParseMode.HTML)
         else:
             if user_algorithm != 'style_7':
-                db_users[message.from_user.id]['style'] = styles_images[int(user_algorithm.split("_")[1]) - 1]
+                db_users[message.from_user.id]['style'] = styles_images[
+                    int(user_algorithm.split("_")[1]) - 1]
             await message.answer(
-                "Подожди не более 5 минут, и я отправлю результат  \n\U0001F40C   \U0001F40C   \U0001F40C")
-            logging.info(f"Start Style Transfer")
+                "Подожди не более 5 минут, и я отправлю результат  \n"
+                "\U0001F40C   \U0001F40C   \U0001F40C")
+            logging.info("Start Style Transfer")
 
             threading.Thread(
                 target=lambda mess, style_img, basic_img:
                 asyncio.run(style_transfer(mess, style_img, basic_img)),
                 args=(message, db_users[message.from_user.id]['style'], photo)).start()
     else:
-        await message.answer("ВЫБЕРИ что надо сделать,\nа потом отправь мне фотографии  \U0001F447",
+        await message.answer("ВЫБЕРИ что надо сделать,\n"
+                             "а потом отправь мне фотографии  \U0001F447",
                              reply_markup=select_transform())
 
 
@@ -244,4 +257,4 @@ if __name__ == "__main__":
         asyncio.run(main())
         # asyncio.get_event_loop().run_until_complete(main())
     else:
-        uvicorn.run(app, host="0.0.0.0", port=8000)  # деплой на компьютере под управлением Linux в режиме сервера
+        uvicorn.run(app, host="0.0.0.0", port=8000)  # деплой на Linux в режиме сервера
