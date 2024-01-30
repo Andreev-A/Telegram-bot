@@ -21,11 +21,6 @@ from src.handlers.start import start_router
 from src.middlewares.config import ConfigMiddleware
 import argparse
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--url", type=str, default='', help="url")
-args, unknown = parser.parse_known_args()
-url = args.url
-
 warnings.filterwarnings("ignore")
 
 logger = logging.getLogger(__name__)
@@ -33,6 +28,11 @@ logging.basicConfig(
     level=logging.INFO,  # filename="OLD/py_log.log", filemode="w,"
     format=u'%(filename)s:%(lineno)d #%(levelname)-8s [%(asctime)s] - %(name)s - %(message)s',
 )
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--url", type=str, default='', help="url")
+args, unknown = parser.parse_known_args()
+url = args.url
 
 config = load_config(".env")
 
