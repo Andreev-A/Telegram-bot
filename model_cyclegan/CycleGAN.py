@@ -1,10 +1,12 @@
-from PIL import Image
+import sys
+from io import BytesIO
+
 import PIL
 import torch
 import torchvision.transforms as transforms
-from io import BytesIO
-import sys
-sys.path.append('model_cyclegan')
+from PIL import Image
+
+sys.path.append("model_cyclegan")
 
 
 class ImageProcessing:
@@ -13,10 +15,9 @@ class ImageProcessing:
         self.device = device
         self.image_size = None
 
-        self.loader = transforms.Compose([
-            transforms.ToTensor(),
-            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-        ])
+        self.loader = transforms.Compose(
+            [transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]
+        )
 
         self.unloader = transforms.ToPILImage()
 
@@ -53,8 +54,8 @@ def run_gan(wts_path, image_name):
 
     # transform PIL image to send to telegram
     bio = BytesIO()
-    bio.name = 'output.jpeg'
-    new_image.save(bio, 'JPEG')
+    bio.name = "output.jpeg"
+    new_image.save(bio, "JPEG")
     bio.seek(0)
 
     return bio

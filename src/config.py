@@ -17,9 +17,4 @@ def load_config(path: str) -> Config:
     env = Env()
     env.read_env(path)
 
-    return Config(
-        tg=TgBot(
-            token=env.str("BOT_TOKEN"),
-            webhook_url=env.str("WEBHOOK_URL")
-        )
-    )
+    return Config(tg=TgBot(token=env.str("BOT_TOKEN"), webhook_url=env.str("WEBHOOK_URL")))

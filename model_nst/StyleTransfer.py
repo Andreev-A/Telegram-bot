@@ -1,12 +1,14 @@
-from PIL import Image, ImageOps
+import logging
+from io import BytesIO
+
 import PIL
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 import torchvision.transforms as transforms
-from io import BytesIO
-import logging
+from PIL import Image, ImageOps
+
 logging.basicConfig(level=logging.INFO)
 
 
@@ -34,8 +36,8 @@ class ImageProcessing:
 
         # transform PIL image to send to telegram
         bio = BytesIO()
-        bio.name = 'output.jpeg'
-        image.save(bio, 'JPEG')
+        bio.name = "output.jpeg"
+        image.save(bio, "JPEG")
         bio.seek(0)
 
         return bio
@@ -84,14 +86,14 @@ class Normalization(nn.Module):
 
 
 class StyleTransfer:
-    def __init__(self, num_steps, device = 'cpu', style_weight=100000, basic_weight=1):
+    def __init__(self, num_steps, device="cpu", style_weight=100000, basic_weight=1):
         self.num_steps = num_steps
         self.style_weight = style_weight
         self.content_weight = basic_weight
         self.device = device
 
-        self.content_layers = ['conv_4']
-        self.style_layers = ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5']
+        self.content_layers = ["conv_4"]
+        self.style_layers = ["conv_1", "conv_2", "conv_3", "conv_4", "conv_5"]
 
     def get_style_model_and_losses(self, style_img, basic_img):
         # vgg19
@@ -106,10 +108,12 @@ class StyleTransfer:
             nn.Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False),
-            nn.Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            nn.Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),
         )
-        
-        cnn.load_state_dict(torch.load("models_wts/vgg19.pth", map_location=torch.device(self.device)))
+
+        cnn.load_state_dict(
+            torch.load("models_wts/vgg19.pth", map_location=torch.device(self.device))
+        )
         cnn = cnn.to(self.device).eval()
 
         normalization = Normalization(self.device).to(self.device)
@@ -123,13 +127,13 @@ class StyleTransfer:
         for layer in cnn.children():
             if isinstance(layer, nn.Conv2d):
                 i += 1
-                name = 'conv_{}'.format(i)
+                name = "conv_{}".format(i)
             elif isinstance(layer, nn.BatchNorm2d):
-                name = 'bn_{}'.format(i)
+                name = "bn_{}".format(i)
             elif isinstance(layer, nn.ReLU):
-                name = 'relu_{}'.format(i)
+                name = "relu_{}".format(i)
             elif isinstance(layer, nn.MaxPool2d):
-                name = 'pool_{}'.format(i)
+                name = "pool_{}".format(i)
 
             model.add_module(name, layer)
 
@@ -154,8 +158,7 @@ class StyleTransfer:
 
     def transfer_style(self, style_img, basic_img):
         input_img = basic_img.clone()
-        model, style_losses, content_losses = self.get_style_model_and_losses(
-            style_img, basic_img)
+        model, style_losses, content_losses = self.get_style_model_and_losses(style_img, basic_img)
         optimizer = self.get_input_optimizer(input_img)
 
         run = [0]
@@ -192,6 +195,7 @@ class StyleTransfer:
         input_img.data.clamp_(0, 1)
 
         return input_img
+
 
 def run_nst(image_style, image_basic):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
