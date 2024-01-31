@@ -109,7 +109,6 @@ torchvision==0.14.0
 |  | Examples | Примеры работы модели |
 |  | Styles | Варианты картинок для стиля |
 | model_cyclegan | | |
-|  | checkpoints | Веса, используемые для создания СycleGAN |
 |  | models | Архитектура СycleGAN |
 |  | options | Параметры для создания СycleGAN |
 |  | scripts | Внутри скрипт для загрузки весов CycleGAN |
