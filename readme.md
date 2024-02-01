@@ -75,7 +75,7 @@ __Особенности работы__:
 #!/bin/bash
 
 res=$(curl --location --request GET 'https://api.ngrok.com/tunnels' \
---header 'Authorization: Bearer здесь ключ API' \
+--header 'Authorization: Bearer <ключ API>' \
 --header 'Ngrok-Version: 2' | awk 'BEGIN { FS="\""; RS="," }; { if ($2 == "public_url") {print $4}}')
 
 if [ -z "$res" ]
