@@ -7,7 +7,7 @@
 используя классический алгоритм Гатиса на базе предобученной VGG19 или используя CycleGAN.
 Для написания бота использовалась библиотека aiogram 3 для построения асинхронной архитектуры.
 
-Открыть [__Neural style transfer бот__](https://t.me/apower_bot)
+Открыть [__My neural style transfer__](https://t.me/apower_bot)
 
 Весь код в файле [_app.py_](https://github.com/Andreev-A/Telegram-bot/blob/master/app.py)
 
