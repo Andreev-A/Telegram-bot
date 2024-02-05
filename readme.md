@@ -97,9 +97,12 @@ python3 -i app.py --url="$res"
 ```
 python==3.8.10
 aiogram==3.3.0
-Pillow==10.2.0
 torch==1.13.0
 torchvision==0.14.0
+black==24.1.1
+flake8==6.1.0
+mypy==1.8.0
+isort==5.13.2
 ```
 
 ## Структура репозитория
