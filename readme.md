@@ -14,7 +14,6 @@
 Код обучения модели в файле [_train_vgg19.ipynb_](https://github.com/Andreev-A/Telegram-bot/blob/master/model_nst/train_vgg19.ipynb)
 
 [__Скриншот проверки работы__](https://github.com/Andreev-A/Telegram-bot/blob/master/Images/Check_screenshot.png)
-
 <br> Бот работает на данный момент уже более двух месяцев.
 
 [__Аккаунт в Telegram__](https://t.me/apower_ru)
