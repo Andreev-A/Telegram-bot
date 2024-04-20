@@ -12,7 +12,9 @@
 Весь код в файле [_app.py_](https://github.com/Andreev-A/Telegram-bot/blob/master/app.py)
 
 Код обучения модели в файле [_train_vgg19.ipynb_](https://github.com/Andreev-A/Telegram-bot/blob/master/model_nst/train_vgg19.ipynb)
-<br><br><br><br><br><br><br><br><br><br><br><br>
+
+[__Фото проверки работы__](https://github.com/Andreev-A/Telegram-bot/blob/master/Images/Check screenshot.png)  [__Аккаунт в Telegram]__(https://t.me/apower_ru)
+<br><br><br><br><br><br><br><br><br><br>
 
 Функционал бота:  
 1. Перенести стиль
