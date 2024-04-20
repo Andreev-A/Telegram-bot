@@ -16,7 +16,7 @@
 [__Скриншот проверки работы (бот работает на данный момент уже более двух месяцев)__](https://github.com/Andreev-A/Telegram-bot/blob/master/Images/Check_screenshot.png)
 
 [__Аккаунт в Telegram__](https://t.me/apower_ru)
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 
 Функционал бота:  
 1. Перенести стиль
