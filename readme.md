@@ -27,8 +27,8 @@
 2. Использовать CycleGAN
     * Превратить лошадь в зебру
     * Превратить зебру в лошадь
-<img src='../assImages/Examples/Screen_6.png' align="left" vspace="5" hspace="5" width=350>
-<img src='../assImages/Examples/Screen_7.png' align="center" vspace="5" hspace="5" width=350>  
+<img src='../assets/Images/Examples/Screen_6.png' align="left" vspace="5" hspace="5" width=350>
+<img src='../assets/Images/Examples/Screen_7.png' align="center" vspace="5" hspace="5" width=350>  
 
 3. Бот может отправить примеры, полученные в результате работы трёх вышеназванных алгоритмов  
 
