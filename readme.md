@@ -1,6 +1,6 @@
 ### <p align="center">Aiogram StyleTransfer CycleGAN Webhook</p><br>
 
-<img src='Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=360>
+<img src='../assets/Images/Examples/Screen_1.png' align="left" vspace="5" hspace="5" width=360>
 
 ## Telegram Bot
 Это - __Neural style transfer бот__. Он умеет создавать новые фотографии с помощью нейронных сетей,
@@ -19,9 +19,9 @@
 1. Перенести стиль
    * Для начала необходимо отправить боту фотографию стиля, а затем фотографию, на которую необходимо перенести стиль   
    * Есть возможность выбрать картинку стиля у бота. Предлагается на выбор 6 разных картин художников
-<img src='../assetsImages/Examples/Screen_3.png' align="left" vspace="2" hspace="2" width=250>
-<img src='../assetsImages/Examples/Screen_4.png' align="right" vspace="2" hspace="2" width=250>
-<img src='../assetsImages/Examples/Screen_5.png' align="center" vspace="2" hspace="2" width=278>
+<img src='../assets/Images/Examples/Screen_3.png' align="left" vspace="2" hspace="2" width=250>
+<img src='../assets/Images/Examples/Screen_4.png' align="right" vspace="2" hspace="2" width=250>
+<img src='../assets/Images/Examples/Screen_5.png' align="center" vspace="2" hspace="2" width=278>
 
 
 2. Использовать CycleGAN
@@ -66,8 +66,8 @@ __Особенности работы__:
 ## Deployment
 Первоначально бот был развёрнут на pythonanywhere.com. Но бесплатное развертывание гарантирует 100 с работы с максимальным использование процессора в сутки. Что в моем случае хватило на обработку одной картинки - далее уходит порядка 15-40 минут на одну обработку (по мере свободности ресурсов сервера).
 
-<img src='../assetsImages/Examples/Screen_8.png' align="center" vspace="5" hspace="5" width=850>
-<img src='../assetsImages/Examples/Screen_9.png' align="center" vspace="5" hspace="5" width=850>
+<img src='../assets/Images/Examples/Screen_8.png' align="center" vspace="5" hspace="5" width=850>
+<img src='../assets/Images/Examples/Screen_9.png' align="center" vspace="5" hspace="5" width=850>
 
 По этой причине на данный момент времени бот развернут на компьютере [Nvidia Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) под управлением Ubuntu 20.04, который позволяет создавать автономные аппаратные системы, работающие на моделях глубокого обучения с GPU-ускорением.
 
