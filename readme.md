@@ -13,7 +13,7 @@
 
 Код обучения модели в файле [_train_vgg19.ipynb_](model_nst/train_vgg19.ipynb)
 
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 Функционал бота:  
 1. Перенести стиль
